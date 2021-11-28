@@ -1,0 +1,516 @@
+
+/* My Discord: Houman#7172 */
+
+#p {
+	visibility: hidden;
+}
+
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.0vh;
+    overflow: hidden;
+}
+
+.DefWhiteColor {
+    color: white;
+    text-shadow: -0.1vh 0 black, 0 0.1vh black, 0.1vh 0 black, 0 -0.1vh black;
+}
+
+.DefBlackColor {
+    color: black;
+    text-shadow: -0.1vh 0 white, 0 0.1vh white, 0.1vh 0 white, 0 -0.1vh white;
+}
+
+.serverlogo {
+	width: 8vh;
+	height: 8vh;
+	border-radius: 15vh;
+	position: absolute;
+	right: 1vh;
+	top: 5vh;
+	z-index: 2;
+    transform: translate(-50%, -50%);
+}
+
+.bigimg {
+	width: 40vh;
+	height: 40vh;
+	border-radius: 1.2vh;
+	position: absolute;
+	right: 2vh;
+	top: 12vh;
+	border-radius: 2vh;
+}
+
+.a_discordimg {
+	background: rgba(255, 255, 255, 0.0);
+	position: absolute;
+	right: 2vh;
+	bottom: 2vh;
+	border-radius: 15vh;
+}
+
+.a_discordimg:hover {
+	background: rgba(255, 255, 255, 0.2);
+	right: 1vh;
+	bottom: 1vh;
+	border-radius: 2vh;
+	cursor: pointer;
+}
+
+.discordimg {
+	width: 7vh;
+	height: 7vh;
+}
+
+.discordimg:hover {
+	width: 9vh;
+	height: 9vh;
+	opacity: 0.85;
+}
+
+
+@keyframes ShowDiscord_Copy_Show {
+	0% {
+		visibility: hidden;
+		opacity: 0.0;
+	}
+	10% {
+		visibility: visible;
+		opacity: 1.0;
+	}
+	50% {
+		opacity: 1.0;
+		visibility: visible;
+	}
+	90% {
+		opacity: 1.0;
+		visibility: visible;
+	}
+	100%   {
+		opacity: 0.0;
+		visibility: hidden;
+	}
+}
+
+
+@keyframes NONE {
+	0% {
+		overflow: hidden;
+	}
+	100% {
+		overflow: hidden;
+	}
+}
+
+.Discord_Copy_Show {
+	visibility: hidden;
+	padding: 1vh;
+	position: absolute;
+	right: 2vh;
+	bottom: 15vh;
+	background: rgba(0, 255, 76, 0.85);
+	border-radius: 1.5vh;
+}
+
+
+.servername {
+	text-align: center;
+    font-size: 2.5vh;
+	padding-top: 3vh;
+	display: inline-block;
+	margin-left: 2vh;
+	margin-bottom: 1.5vh;
+}
+
+@keyframes ToLightMode_place_on_off_mode {
+	0%   {
+		background: rgba(255, 255, 255, 1.0);
+	}
+	100% {
+		background: rgba(0, 0, 0, 1.0);
+	}
+}
+
+@keyframes ToDarkMode_place_on_off_mode {
+	0% {
+		background: rgba(0, 0, 0, 1.0);
+	}
+	100%   {
+		background: rgba(255, 255, 255, 1.0);
+	}
+}
+
+
+.place_on_off_mode {
+	position: absolute;
+	right: 12vh;
+	bottom: 1.7vh;
+	width: 30vh;
+	height: 11vh;
+	border-radius: 15vh;
+	border: 0.35vh solid rgba(0, 0, 0, 1.0);
+	background: rgba(255, 255, 255, 1.0);
+}
+
+@keyframes ToLightMode_dayereyeonoff {
+	0%   {
+		background-image: url("./img/Dark_A.png");
+		right: 12.2vh;
+	}
+	100% {
+		background-image: url("./img/Light_A.png");
+		right: 30.8vh;
+	}
+}
+
+@keyframes ToDarkMode_dayereyeonoff {
+	0% {
+		background-image: url("./img/Light_A.png");
+		right: 30.8vh;
+	}
+	100%   {
+		background-image: url("./img/Dark_A.png");
+		right: 12.2vh;
+	}
+}
+
+.dayereyeonooff {
+	position: fixed;
+	bottom: 1.7vh;
+	right: 12.2vh;
+	width: 11vh;
+	height: 11vh;
+	border-radius: 15vh;
+	background: rgba(0, 10, 20, 1.0);
+	background-image: url("./img/Dark_A.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 0.35vh solid rgba(0, 0, 0, 1.0);
+}
+
+.dayereyeonooff:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+
+@keyframes ToLightMode_showallplayer {
+	0%   {
+		background: rgba(48, 48, 48, 0.7);
+	}
+	100% {
+		background: rgba(255, 255, 255, 0.7);
+	}
+}
+
+@keyframes ToDarkMode_showallplayer {
+	0% {
+		background: rgba(255, 255, 255, 0.7);
+	}
+	100%   {
+		background: rgba(48, 48, 48, 0.7);
+	}
+}
+
+
+
+.showallplayer {
+	margin-top: 2vh;
+	margin-left: 2vh;
+	padding: 1.5vh;
+	font-size: 2.5vh;
+	background: rgba(48, 48, 48, 0.7);
+	display: inline-block;
+	border-radius: 1vh;
+}
+
+@keyframes ToLightMode_placeplayers {
+	0%   {
+		background: rgba(30, 30, 50, 0.7);
+	}
+	100% {
+		background: rgba(230, 230, 250, 0.7);
+	}
+}
+
+@keyframes ToDarkMode_placeplayers {
+	0% {
+		background: rgba(230, 230, 250, 0.7);
+	}
+	100%   {
+		background: rgba(30, 30, 50, 0.7);
+	}
+}
+
+
+.place_players {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	width: 75vh;
+	height: 36vh;
+	background: rgba(30, 30, 50, 0.7);
+	border-radius: 2vh;
+	margin-top: 3vh;
+	margin-left: 1.5vh;
+}
+
+.playerinfo {
+	padding: 1vh;
+	border: 0.25vh solid rgba(0, 0, 0, 1.0);
+}
+
+.playername {
+	float: left;
+}
+
+.playerid {
+	margin-left: 1vh;
+	float: left;
+}
+
+.playerperm {
+	margin-left: 1vh;
+	float: left;
+}
+
+.playerping {
+	margin-left: 1vh;
+	float: left;
+}
+
+.myname {
+	font-size: 1.5vh;
+}
+
+.myping {
+	font-size: 1.5vh;
+}
+
+.myperm {
+	font-size: 1.5vh;
+}
+
+.alladmins {
+	font-size: 1.5vh;
+}
+
+.playeradmin {
+	margin-top: 1vh;
+	font-size: 1.85vh;
+}
+
+@keyframes ToLightMode_placemydata {
+	0%   {
+		background: rgba(15, 20, 30, 0.95);
+	}
+	100% {
+		background: rgba(215, 220, 230, 0.95);
+	}
+}
+
+@keyframes ToDarkMode_placemydata {
+	0% {
+		background: rgba(215, 220, 230, 0.95);
+	}
+	100%   {
+		background: rgba(15, 20, 30, 0.95);
+	}
+}
+
+.place_mydata {
+	margin-top: 5vh;
+	margin-left: 1vh;
+	padding: 3vh;
+	background-color: rgb(255, 255, 255);
+	height: 10vh;
+	min-width: 12vh;
+	max-width: 27vh;
+	border-radius: 3vh;
+	display: inline-block;
+	background: rgba(15, 20, 30, 0.95);
+	border: 0.1vh solid rgba(255, 255, 255, 0.15);
+}
+
+
+@keyframes ToLightMode_placejobs {
+	0% {
+		background: rgba(15, 20, 30, 0.95);
+	}
+	100% {
+		background: rgba(215, 220, 230, 0.95);
+	}
+}
+
+@keyframes ToDarkMode_placejobs {
+	0% {
+		background: rgba(215, 220, 230, 0.95);
+	}
+	100% {
+		background: rgba(15, 20, 30, 0.95);
+	}
+}
+
+
+.place_jobs {
+	margin-top: 10vh;
+	margin-left: 2vh;
+	padding: 2vh;
+	background-color: rgb(255, 255, 255);
+	min-width: 30vh;
+	min-height: 11vh;
+	max-width: 63vh;
+	border-radius: 3vh;
+	display: inline-block;
+	background: rgba(15, 20, 30, 0.95);
+	border: 0.1vh solid rgba(255, 255, 255, 0.15);
+}
+
+.jobimage {
+	width: 8vh;
+	height: 8vh;
+	border-radius: 1.5vh;
+}
+
+.textjob {
+	text-align: center;
+}
+
+.box-job {
+	width: 8vh;
+	height: 11vh;
+	float: left;
+	padding: 0.5vh;
+}
+
+@keyframes ToLightMode_upper {
+	0%   {
+		background: rgba(0, 0, 0, 0.85);
+	}
+	100% {
+		background: rgba(255, 255, 255, 0.85);
+	}
+}
+
+@keyframes ToDarkMode_upper {
+	0% {
+		background: rgba(255, 255, 255, 0.85);
+	}
+	100% {
+		background: rgba(0, 0, 0, 0.85);
+	}
+}
+
+.upper
+{
+	width: 100%;
+	height: 10vh;
+	background: rgba(0, 0, 0, 0.85);
+}
+
+.main2 {
+	padding: 1vh;
+}
+
+
+@keyframes ToLightMode_main {
+	0%   {
+		background: rgba(0, 10, 20, 0.9);
+	}
+	100% {
+		background: rgba(200, 210, 220, 0.9);
+	}
+}
+
+@keyframes ToDarkMode_main {
+	0% {
+		background: rgba(200, 210, 220, 0.9);
+	}
+	100% {
+		background: rgba(0, 10, 20, 0.9);
+	}
+}
+
+
+@keyframes offmain {
+	0%   {
+		top: 50%;
+		left: 50%;
+		border-radius: 0.7vh;
+		width: 122vh;
+		height: 80vh;
+	}
+	100% {
+		top: 50%;
+		left: 100%;
+		border-radius: 0.7vh;
+		width: 10vh;
+		height: 10vh;
+	}
+}
+
+
+@keyframes onmain {
+	0% {
+		top: 50%;
+		left: 100%;
+		border-radius: 0.7vh;
+		width: 10vh;
+		height: 10vh;
+	}
+	100%   {
+		top: 50%;
+		left: 50%;
+		border-radius: 0.7vh;
+		width: 122vh;
+		height: 80vh;
+	}
+}
+
+
+@keyframes towhitecolor {
+	0% {
+		color: #000;
+		text-shadow: -0.1vh 0 white, 0 0.1vh white, 0.1vh 0 white, 0 -0.1vh white;
+	}
+	100%   {
+		color: rgb(255, 255, 255);
+		text-shadow: -0.1vh 0 black, 0 0.1vh black, 0.1vh 0 black, 0 -0.1vh black;
+	}
+}
+
+@keyframes toblackcolor {
+	0% {
+		color: rgb(255, 255, 255);
+		text-shadow: -0.1vh 0 black, 0 0.1vh black, 0.1vh 0 black, 0 -0.1vh black;
+	}
+	100%   {
+		color: #000;
+		text-shadow: -0.1vh 0 white, 0 0.1vh white, 0.1vh 0 white, 0 -0.1vh white;
+	}
+}
+
+.main {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	border-radius: 0.7vh;
+
+	width: 122vh;
+	height: 80vh;
+
+	background: rgba(0, 10, 20, 0.9);
+
+	border: 0.1vh solid rgba(0, 0, 0, 0.8);
+
+	box-shadow: 0vh 0.2vh 0.2vh rgba(0, 0, 0, 0.25);
+	border-radius: 1.1vh;
+
+
+}
+
+/* My Discord: Houman#7172 */
