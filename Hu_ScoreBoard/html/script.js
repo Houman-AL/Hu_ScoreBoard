@@ -1,5 +1,6 @@
 // My Discord: Houman#7172
 
+
 var thename = 'Hu_ScoreBoard'
 
 const root = thename
@@ -11,8 +12,13 @@ function ToggleLightMode() {
 }
 
 function ToggleOff(){
+	// $('.playerinfo').html('');
+	// let element = 	'';
+	// $('.playerinfo').append(element);
+
 	$('.main').css('animation-name', 'offmain');
 	$('.main').css('animation-duration', SecLeft);
+	// $.post('http://'+root+'/datas', JSON.stringify({toggleoff: true}));
 	$('.main').fadeOut(800);
 }
 
@@ -94,35 +100,8 @@ $(function () {
 				$('.taxi').html(''+Datas.taxi);
 
 
-				if (Datas.AllPlayers && Array.isArray(Datas.AllPlayers) ){
-					Datas.AllPlayers.sort(function(a, b) {
-						if ((a && a.id) && (b && b.id)) {
-							let idA = a.id;
-							let idB = b.id;
-							if (idA < idB)
-								return -1 
-							if (idA > idB)
-								return 1
-							return 0
-						}
-					});
-					for (var i = 0; i < Datas.AllPlayers.length; i++) {
-						if (Datas.AllPlayers[i]){
-							let id = Datas.AllPlayers[i].id;
-							let name = Datas.AllPlayers[i].name;
-							let perm = Datas.AllPlayers[i].perm;
-							let ping = Datas.AllPlayers[i].ping;
-		
-							let element = '<div class="playerinfo">'+
-								'<div class="playername">'+name+' |</div>'+
-								'<div class="playerid">ID: '+id+' |</div>'+
-								'<div class="playerperm">Perm: '+perm+' |</div>'+
-								'<div class="playerping">Ping: '+ping+'ms</div>'+
-							'</div>';
-		
-							$('.place_players').append(element);
-						}
-					}
+				if (Datas.AllPlayers){
+					$('.place_players').html(Datas.AllPlayers);
 				}
 
 				break;
@@ -221,5 +200,7 @@ $(function () {
 	})
 
 });
+
+
 
 // My Discord: Houman#7172
