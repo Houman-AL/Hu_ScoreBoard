@@ -12,13 +12,8 @@ function ToggleLightMode() {
 }
 
 function ToggleOff(){
-	// $('.playerinfo').html('');
-	// let element = 	'';
-	// $('.playerinfo').append(element);
-
 	$('.main').css('animation-name', 'offmain');
 	$('.main').css('animation-duration', SecLeft);
-	// $.post('http://'+root+'/datas', JSON.stringify({toggleoff: true}));
 	$('.main').fadeOut(800);
 }
 
