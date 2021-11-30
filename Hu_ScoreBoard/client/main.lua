@@ -1,4 +1,3 @@
--- My Discord: Houman#7172
 
 local MaxCurrentPlayer = Config.MaxCurrentPlayer
 
@@ -66,9 +65,16 @@ AddEventHandler('Hu_ScoreBoard:SendPlayers', function(allplayer, admins, alljobs
 	local MyName = 'LOADING...'
 	local MyPing = 'LOADING...'
 	local MyPerm = 'LOADING...'
+	local AllPlayersB = ''
 	for _,i in pairs(allplayer) do
 		Players = Players + 1
 		allplayer2[tonumber(_)] = i
+		AllPlayersB = AllPlayersB .. '<div class="playerinfo">'..
+			'<div class="playername">'..tostring(i.name)..' |</div>'..
+			'<div class="playerid">ID: '..tostring(i.id)..' |</div>'..
+			'<div class="playerperm">Perm: '..tostring(i.perm)..' |</div>'..
+			'<div class="playerping">Ping: '..tostring(i.ping)..'ms</div>'..
+		'</div>'
 		if tonumber(_) == tonumber(GetPlayerServerId(PlayerId())) then
 			MyName = tostring(i.name)..string.format('[%s]', tostring(i.id))
 			MyPing = i.ping
@@ -83,7 +89,7 @@ AddEventHandler('Hu_ScoreBoard:SendPlayers', function(allplayer, admins, alljobs
 	if ToggleScoreBoard then
 		SendNUIMessage({
 			type = 'data',
-			AllPlayers = AllPlayers,
+			AllPlayers = AllPlayersB,
 			Players = tostring(Players),
 			MaxPlayer = MaxCurrentPlayer,
 			AllAdmins = tostring(admins),
@@ -112,8 +118,15 @@ function ToggleF10(bool)
 		local MyName = 'LOADING...'
 		local MyPing = 'LOADING...'
 		local MyPerm = 'LOADING...'
+		local AllPlayersB = ''
 		for _,i in pairs(AllPlayers) do
 			Players = Players + 1
+			AllPlayersB = AllPlayersB .. '<div class="playerinfo">'..
+				'<div class="playername">'..tostring(i.name)..' |</div>'..
+				'<div class="playerid">ID: '..tostring(i.id)..' |</div>'..
+				'<div class="playerperm">Perm: '..tostring(i.perm)..' |</div>'..
+				'<div class="playerping">Ping: '..tostring(i.ping)..'ms</div>'..
+			'</div>'
 			if tonumber(_) == tonumber(GetPlayerServerId(PlayerId())) then
 				MyName = tostring(i.name)..string.format('[%s]', tostring(i.id))
 				MyPing = i.ping
@@ -122,7 +135,7 @@ function ToggleF10(bool)
 		end
 		SendNUIMessage({
 			type = 'data',
-			AllPlayers = AllPlayers,
+			AllPlayers = AllPlayersB,
 			Players = tostring(Players),
 			MaxPlayer = MaxCurrentPlayer,
 			AllAdmins = tostring(AllAdmins),
@@ -202,4 +215,5 @@ end)
 
 RegisterKeyMapping('Open_Hu_ScoreBoard', 'Open Scoreboard', 'keyboard', 'f10')
 
--- My Discord: Houman#7172
+
+
